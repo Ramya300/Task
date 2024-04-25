@@ -1,0 +1,55 @@
+.main {
+    background: linear-gradient(45deg, #000000 38%, #7b7474 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg_div {
+    width: 30%;
+    padding-top: 60px;
+    position: relative;
+}
+
+.refresh_div {
+    display: flex;
+    justify-content: center;
+}
+
+.material-icons {
+    color: #aca1a1;
+    margin: 0 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.material-icons:active {
+
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+.random-task {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.list_div {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: white;
+    font-size: small;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.list_div input[type="text"] {
+   width: 100px;
+    margin-left: 22px;
+}
