@@ -21,13 +21,23 @@ public class TaskService {
     }
 
     public void deleteTask(Long task) {
-        taskRepository.deleteById(task);
+        try{
+            taskRepository.deleteById(task);
+        } catch(Exception e){
+            throw new DeleteOperationFailed("Failed to delete.");
+        }
+
     }
 
     public void addTask(String newTask){
         Task task = new Task();
         task.setTask(newTask);
-        taskRepository.save(task);
+        try{
+            taskRepository.save(task);
+        }catch(Exception e){
+            throw new InsertOperationFailed("Unable to insert the given task to the List.");
+        }
+
     }
 
 }
