@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler({DeleteOperationFailed.class})
-    public ResponseEntity<Object> handleDeleteOperationFailed(DeleteOperationFailed exception){
+    @ExceptionHandler({DeleteOperationFailedException.class})
+    public ResponseEntity<Object> handleDeleteOperationFailed(DeleteOperationFailedException exception){
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());
     }
 
-    @ExceptionHandler({InsertOperationFailed.class})
-    public ResponseEntity<Object> handleInsertOperationFailed(InsertOperationFailed exception){
+    @ExceptionHandler({InsertOperationFailedException.class})
+    public ResponseEntity<Object> handleInsertOperationFailed(InsertOperationFailedException exception){
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());
     }
 }
