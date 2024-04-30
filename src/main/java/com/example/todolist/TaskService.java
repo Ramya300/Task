@@ -24,7 +24,7 @@ public class TaskService {
         try{
             taskRepository.deleteById(task);
         } catch(Exception e){
-            throw new DeleteOperationFailed("Failed to delete.");
+            throw new DeleteOperationFailedException("Failed to delete.");
         }
 
     }
@@ -35,7 +35,7 @@ public class TaskService {
         try{
             taskRepository.save(task);
         }catch(Exception e){
-            throw new InsertOperationFailed("Unable to insert the given task to the List.");
+            throw new InsertOperationFailedException("Unable to insert the given task to the List.");
         }
 
     }
